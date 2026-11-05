@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
-<head> <meta name="ppck-ver" content="8c912afaea1050da530ab13198a3e3ab"
-         </meta> charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Tag Verifikasi Iklan -->
+    <meta name="ppck-ver" content="8c912afaea1050da530ab13198a3e3ab">
+    
     <title>Peringatan Akses 18+</title>
     <style>
         * {
@@ -107,16 +110,16 @@
         <div id="step1" class="step-container">
             <h1>Konfirmasi Usia Anda</h1>
             <p class="desc">Konten ini memuat materi khusus dewasa. Apakah Anda berusia 18 tahun atau lebih?</p>
-            <button class="btn" onclick="nextStep(2)">YA, SAYA 18+ TAHUN</button>
-            <button class="btn btn-secondary" onclick="alert('Akses Ditolak')">TIDAK</button>
+            <button type="button" class="btn" onclick="nextStep(2)">YA, SAYA 18+ TAHUN</button>
+            <button type="button" class="btn btn-secondary" onclick="denyAccess()">TIDAK</button>
         </div>
 
-        <!-- Step 2: Micro Question (Meningkatkan Engagment/CPM) -->
+        <!-- Step 2: Micro Question -->
         <div id="step2" class="step-container" style="display: none;">
             <h1>Verifikasi Keamanan</h1>
             <p class="desc">Apakah Anda menyetujui penayangan konten privasi dewasa di perangkat seluler Anda?</p>
-            <!-- MASUKKAN LINK ADSTERRA SMARTLINK ANDA PADA HREF DI BAWAH -->
-            <a href="https://YOUR_ADSTERRA_DIRECT_LINK_HERE.com" class="btn">SETUJU & LANJUTKAN</a>
+            <!-- GANTI URL DENGAN SMARTLINK IKLAN ANDA -->
+            <a href="https://YOUR_ADSTERRA_DIRECT_LINK_HERE.com" class="btn" target="_blank" rel="noopener noreferrer">SETUJU & LANJUTKAN</a>
         </div>
 
         <div class="footer-note">
@@ -126,8 +129,16 @@
 
     <script>
         function nextStep(step) {
-            document.getElementById('step1').style.display = 'none';
-            document.getElementById('step2').style.display = 'block';
+            const currentStep = document.getElementById('step' + (step - 1));
+            const targetStep = document.getElementById('step' + step);
+            
+            if (currentStep) currentStep.style.display = 'none';
+            if (targetStep) targetStep.style.display = 'block';
+        }
+
+        function denyAccess() {
+            alert('Akses Ditolak');
+            window.location.href = 'https://www.google.com';
         }
     </script>
 
