@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
-<head><meta name="ppck-ver" content="8c912afaea1050da530ab13198a3e3ab" />
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- Meta Verification Tag PopCash -->
+    
+    <!-- Meta Verification Tag PopCash (Telah Dirapikan) -->
     <meta name="ppck-ver" content="8c912afaea1050da530ab13198a3e3ab" />
+    
     <title>Peringatan Akses 18+</title>
     <style>
         * {
@@ -92,46 +94,3 @@
             box-shadow: none;
             color: #bdc3c7;
         }
-
-        .footer-note {
-            font-size: 11px;
-            color: #666;
-            margin-top: 15px;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="card">
-        <span class="badge-18">Khusus 18+</span>
-
-        <!-- Step 1: Pertanyaan Usia -->
-        <div id="step1" class="step-container">
-            <h1>Konfirmasi Usia Anda</h1>
-            <p class="desc">Konten ini memuat materi khusus dewasa. Apakah Anda berusia 18 tahun atau lebih?</p>
-            <button class="btn" onclick="nextStep(2)">YA, SAYA 18+ TAHUN</button>
-            <button class="btn btn-secondary" onclick="alert('Akses Ditolak')">TIDAK</button>
-        </div>
-
-        <!-- Step 2: Micro Question (Meningkatkan Engagment/CPM) -->
-        <div id="step2" class="step-container" style="display: none;">
-            <h1>Verifikasi Keamanan</h1>
-            <p class="desc">Apakah Anda menyetujui penayangan konten privasi dewasa di perangkat seluler Anda?</p>
-            <!-- MASUKKAN LINK ADSTERRA SMARTLINK ANDA PADA HREF DI BAWAH -->
-            <a href="https://www.google.com" class="btn">SETUJU & LANJUTKAN</a>
-        </div>
-
-        <div class="footer-note">
-            Koneksi Terenkripsi SSL (256-bit) • Aman & Privat
-        </div>
-    </div>
-
-    <script>
-        function nextStep(step) {
-            document.getElementById('step1').style.display = 'none';
-            document.getElementById('step2').style.display = 'block';
-        }
-    </script>
-
-</body>
-</html>
